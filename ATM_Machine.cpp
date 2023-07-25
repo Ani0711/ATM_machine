@@ -28,8 +28,8 @@ public:
 
 
 int main(){
-    Bank shwetank(1000);
-    Bank chitrank(2000);
+    Bank Shwetank(1000);
+    Bank Aniket(2000);
 
     cout<<"Welcome to ATM !! Our Service Available 24 Hours."<<endl;
    
@@ -40,7 +40,7 @@ int main(){
         string name;
         cin>>name;
         string message1,message2,message;
-        if(name=="shwetank"){
+        if(name=="Shwetank"){
             while(b){
                 cout<<"Choose option to take action"<<endl;
                 cout<<"1. Send Money \t2. Deposit Money \t3. Withdraw Money \t4. Check Balance \t5. Abort Transaction"<<endl;
@@ -49,12 +49,12 @@ int main(){
                 
                 if(option==1){
                     int value;
-                    cout<<"entered amount to send to chitrank"<<endl;
+                    cout<<"entered amount to send to Aniket"<<endl;
                     cin>>value;
-                    message1=shwetank.withdraw(value);
-                    message2=chitrank.deposit(value);
+                    message1=Shwetank.withdraw(value);
+                    message2=Aniket.deposit(value);
                     if(message1=="debit successfull" && message2=="deposit successfull"){
-                        cout<<value<<" rs sended to chitrank"<<endl;
+                        cout<<value<<" rs sended to Aniket"<<endl;
                     }
                     else{
                         cout<<message1<<endl;
@@ -65,12 +65,12 @@ int main(){
                     int value;
                     cout<<"entered amount to deposit"<<endl;
                     cin>>value;
-                    message1=shwetank.deposit(value);
+                    message1=Shwetank.deposit(value);
                     if(message1=="deposit successfull"){
-                        cout<<value<<" rs deposited to shwetank sucessfully"<<endl;
+                        cout<<value<<" rs deposited to Shwetank sucessfully"<<endl;
                     }
                     else{
-                        cout<<"error in depositing money to shwetank"<<endl;
+                        cout<<"error in depositing money to Shwetank"<<endl;
                         message="finished";
                     }
                 }
@@ -78,9 +78,9 @@ int main(){
                     int value;
                     cout<<"entered amount to withdraw"<<endl;
                     cin>>value;
-                    message1=shwetank.withdraw(value);
+                    message1=Shwetank.withdraw(value);
                     if(message1=="debit successfull"){
-                        cout<<value<<" rs withdraw from shwetank"<<endl;
+                        cout<<value<<" rs withdraw from Shwetank"<<endl;
                     }
                     else{
                         cout<<message1<<endl;
@@ -88,7 +88,7 @@ int main(){
                     }
                 }
                 else if(option==4){
-                    message1=shwetank.check_balance();
+                    message1=Shwetank.check_balance();
                     cout<<message1<<endl;
                 }
                 else if(option==5){
@@ -104,7 +104,7 @@ int main(){
                     b=false;
             }
         }
-        else if(name=="chitrank"){
+        else if(name=="Aniket"){
             while(b){
                 cout<<"Choose option to take action"<<endl;
                 cout<<"1. Send Money \t2. Deposit Money \t3. Withdraw Money \t4. Check Balance \t5. Abort Transaction"<<endl;
@@ -113,12 +113,12 @@ int main(){
                 
                 if(option==1){
                     int value;
-                    cout<<"entered amount to send to shwetank"<<endl;
+                    cout<<"entered amount to send to Shwetank"<<endl;
                     cin>>value;
-                    message1=chitrank.withdraw(value);
-                    message2=shwetank.deposit(value);
+                    message1=Aniket.withdraw(value);
+                    message2=Shwetank.deposit(value);
                     if(message1=="debit successfull" && message2=="deposit successfull"){
-                        cout<<value<<" rs sended to shwetank"<<endl;
+                        cout<<value<<" rs sended to Shwetank"<<endl;
                     }
                     else{
                         cout<<message1<<endl;
@@ -129,12 +129,12 @@ int main(){
                     int value;
                     cout<<"entered amount to deposit"<<endl;
                     cin>>value;
-                    message1=chitrank.deposit(value);
+                    message1=Aniket.deposit(value);
                     if(message1=="deposit successfull"){
-                        cout<<value<<" rs deposited to chitrank sucessfully"<<endl;
+                        cout<<value<<" rs deposited to Aniket sucessfully"<<endl;
                     }
                     else{
-                        cout<<"error in depositing money to chitrank"<<endl;
+                        cout<<"error in depositing money to Aniket"<<endl;
                         message="finished";
                     }
                 }
@@ -142,9 +142,9 @@ int main(){
                     int value;
                     cout<<"entered amount to withdraw"<<endl;
                     cin>>value;
-                    message1=chitrank.withdraw(value);
+                    message1=Aniket.withdraw(value);
                     if(message1=="debit successfull"){
-                        cout<<value<<" rs withdraw from chitrank"<<endl; 
+                        cout<<value<<" rs withdraw from Aniket"<<endl; 
                     }
                     else{
                         cout<<message1<<endl;
@@ -152,7 +152,7 @@ int main(){
                     }
                 }
                 else if(option==4){
-                    message1=chitrank.check_balance();
+                    message1=Aniket.check_balance();
                     cout<<message1<<endl;
                 }
                 else if(option==5){
